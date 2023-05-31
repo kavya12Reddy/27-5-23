@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Prop from "./Prop";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component{
+    state={
+        subject:"reactjs",
+        year:"2023"
+    }
+    render(){
+        return(
+         <div>
+            <p> This is a class Component for App</p>
+            <h1> this is head tag </h1>
+            <p> {this.state.subject} {this.state.year} </p>
+            <Prop name="kavya" age="20"/>  
+            <Prop name="siri" age="20"/>  
+        </div>
+        )
+    }
 }
-
-export default App;
+export default App
